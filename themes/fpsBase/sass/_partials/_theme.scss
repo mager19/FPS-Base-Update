@@ -1,0 +1,109 @@
+/*-----------------------------------------------------------------------------------
+
+This is SASS file that defines Fonts and Base Colors
+Name File: theme.sass - theme.css
+Copyright: (C) 2018
+
+ - Content Base -
+
+- Colors
+- Fonts
+- Font Weights
+- Global sizes
+
+-----------------------------------------------------------------------------------*/
+
+//Define FPSBase Theme Colors
+$primary: #5278FF;
+$primary-hover: #3255c9;
+$secondary: #36BDAD;
+$secondary-hover: #279687;
+$txt: rgba(60, 63, 77,0.80);
+
+//Define Theme Fonts
+$font-family-base: 'Roboto', sans-serif;
+$font-family-alt: 'Roboto Condensed', sans-serif;
+
+/*
+    Define Theme Font Weights:
+
+    $font-weight-light:  300;
+    $font-weight-normal: 400;
+    $font-weight-bold:   700;
+    $font-weight-base:   $font-weight-normal;
+*/
+$font-weight-semi: 600;
+
+
+//Define global size
+html{
+    font-size: $font-size-base; //1rem = 16px
+}
+
+body{
+  overflow-x: hidden;
+  background: #fefefe;
+  font-size: 1rem;
+  color: $txt;
+  font-weight: $font-weight-normal;
+  font-family: $font-family-alt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
+  p{
+    word-wrap: normal;
+    word-break: keep-all;
+    hyphens: none;
+    a{
+        font-family: $font-family-alt;
+        &:hover{
+            color: $primary;
+            opacity: 0.8;
+        }
+    }
+  }
+  ul{
+      padding: 0;
+      margin: 0;
+      li{
+            list-style: none;
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            font-weight: $font-weight-light;
+            &::before{
+                font-family: "Font Awesome 5 Free";
+                font-weight: $font-weight-bold;
+                content: "\f0da";
+                position: absolute;
+                left: 0;
+            }
+      }
+  }
+  h1,h2,h3,h4,h5,h6{
+      font-family: $font-family-base;
+      color: $txt;
+      font-weight: $font-weight-bold;
+      word-wrap: normal;
+      word-break: keep-all;
+      hyphens: none;
+  }
+  h1{
+        font-size: 36px;
+        line-height: 46px;
+        @include media-breakpoint-down(md) {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+    h2{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    h3{
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

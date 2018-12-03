@@ -1,0 +1,284 @@
+a {
+	@include fade(0.4s);
+    color: $primary;
+    text-decoration: none;
+    font-family: $font-family-base;
+	&:hover{
+		@include fade(0.4s);
+        color: $primary-hover;
+		text-decoration: none;
+	}
+	&:focus{
+		text-decoration: none;
+	}
+}
+a{
+	img{
+		@include fade(0.4s);
+		&:hover{
+			@include fade(0.4s);
+			opacity: 0.8;
+		}
+	}
+}
+
+//Buttons
+.btn, .button{
+    display: inline-block;
+    box-sizing: border-box;
+    font-weight: $font-weight-semi;
+    text-transform: uppercase;
+    max-width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-family: $font-family-base !important;
+    border: none;
+    @include fade(0.4s);
+    i{ font-size: 0.7rem; }
+    /*Color*/
+    &.primary {
+        background: $primary;
+        color: white !important;
+        &:hover{
+            background: $primary-hover;
+        }
+    }
+    &.secondary {
+        background: $secondary;
+        color: white !important;
+        &:hover{
+            background: $secondary-hover;
+        }
+    }
+    &.white{
+        background: #fff;
+        color: $primary;
+    }
+    /*Button Sizes*/
+    &.xxsmall {
+        font-size: 11px;
+        padding: 12px 16px;
+    }
+    &.xsmall {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+    &.small {
+        font-size: 15px;
+        padding: 12px 30px !important;
+    }
+    &.large {
+        font-size: 17px;
+        padding: 20px 38px;
+    }
+    &.medium{
+        width: 370px;
+        padding: 20px 38px;
+    }
+    &.xlarge {
+        font-size: 18px;
+        padding: 25px 45px;
+        width: 100%;
+        @include media-breakpoint-down(sm){
+            padding: 25px 10px;
+        }
+    }
+    /*Button Styles*/
+    &.outline{
+        background: transparent;
+        border-style: solid;
+        border-width: 1px;
+        padding: 18px 35px;
+        /*outline colors*/
+        &.secondary {
+            border-color: $secondary;
+            color: $secondary;
+            &:hover{
+                background: transparent !important;
+                border-color: $secondary-hover;
+                color: $secondary-hover;
+            }
+        }
+        &.primary {
+            border-color: $primary;
+            color: $primary !important;
+            &:hover{
+              border-color: $primary-hover;
+              color: $primary-hover !important;
+              background: transparent !important;
+            }
+        }
+        &.black{
+            border-color: black;
+            color: black;
+        }
+        &.white {
+            border-color: white;
+            color: white;
+            &:hover{
+
+                background: transparent !important;
+            }
+        }
+        &.xxsmall {
+            font-size: 9px;
+            padding: 4px 10px;
+        }
+         &.xsmall {
+            padding: 13px 20px;
+        }
+        &.small {
+            padding: 10px 20px;
+						font-size: 15px;
+        }
+        &.large {
+            padding: 18px 38px;
+        }
+        &.xlarge {
+            padding: 23px 45px;
+            @include media-breakpoint-down(sm){
+                padding: 22px 10px;
+            }
+        }
+        &.wide {
+            padding: 17px 80px;
+						font-size: 1.1em;
+            @include media-breakpoint-down(sm){
+                padding: 17px 15px;
+            }
+        }
+    }
+    /*Sizes*/
+    /*Special Sizes*/
+    &.block{
+        display: block;
+    }
+		&.wide {
+				padding: 17px 80px;
+				font-size: 1.1em;
+				@include media-breakpoint-down(sm){
+						padding: 17px 15px;
+				}
+		}
+		&.radius{
+			border-radius: 5px;
+		}
+}
+.badge{
+	display: inline-block;
+	box-sizing: border-box;
+	text-transform: uppercase;
+	max-width: 100%;
+	text-align: center;
+	/*default button includes regular size*/
+	padding: 20px 35px;
+	/*Color*/
+	&.circle{
+		border-radius: 100%;
+		padding:8px 15px !important;
+	}
+	&.primary {
+			background: $primary;
+			color: white;
+	}
+	&.secondary {
+			background: $secondary;
+			color: white;
+	}
+
+	/*Button Sizes*/
+	&.xsmall {
+			font-size: 12px;
+			padding: 15px 20px;
+	}
+	&.small {
+			font-size: 15px;
+			padding: 10px 20px;
+	}
+	&.large {
+			font-size: 17px;
+			padding: 20px 38px;
+	}
+	&.xlarge {
+			font-size: 18px;
+			padding: 25px 45px;
+			@include media-breakpoint-down(sm){
+					padding: 25px 10px;
+			}
+	}
+	/*Button Styles*/
+	&.outline{
+			background: transparent;
+			border-style: solid;
+			border-width: 1px;
+			padding: 18px 35px;
+			/*outline colors*/
+			&.primary {
+				border-color: $primary;
+				color: $primary;
+			}
+			&.secondary {
+					border-color: $secondary;
+					color: $secondary;
+			}
+			 &.xsmall {
+					padding: 13px 20px;
+			}
+			&.small {
+					padding: 10px 20px;
+			}
+			&.large {
+					padding: 18px 38px;
+			}
+			&.xlarge {
+					padding: 23px 45px;
+					@include media-breakpoint-down(sm){
+							padding: 22px 10px;
+					}
+			}
+			&.wide {
+					padding: 17px 120px;
+					@include media-breakpoint-down(sm){
+							padding: 17px 15px;
+					}
+			}
+	}
+	/*Sizes*/
+	/*Special Sizes*/
+	&.block{
+			display: block;
+	}
+	&.wide {
+			padding: 20px 120px;
+			@include media-breakpoint-down(sm){
+					padding: 20px 15px;
+			}
+	}
+	&.radius{
+		border-radius: 5px;
+	}
+}
+.btn{
+  &.google{
+    background: $primary;
+    color: white;
+    width: 320px;
+    margin-bottom: 15px;
+		&:hover{
+			background: $primary-hover;
+		}
+  }
+  &.facebook{
+    background: #4267b2;
+    color: white;
+    width: 320px;
+    margin-bottom: 15px;
+  }
+  &.register{
+    width: 320px;
+    margin-bottom: 25px;
+  }
+}

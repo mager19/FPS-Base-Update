@@ -1,0 +1,163 @@
+.gform_wrapper{
+    margin: 0 !important;
+    form{
+        .gform_body{
+            display: inline-block;
+            ul.gform_fields{
+                li{
+                    &:before{
+                        content: none !important;
+                    }
+                    padding: 0;
+                    margin: 0 0 15px 0 !important;
+                    label{
+                        font-size: 12px !important;
+                        font-family: $font-family-base;
+                        margin: 0;
+                        color: $txt;
+                        font-weight: $font-weight-normal;
+                        text-transform: uppercase;
+
+                        &.gfield_label_before_complex{
+                            display: none !important;
+                        }
+                    }
+                    .ginput_container{
+                        margin: 0;
+                        select{
+                            border: 1px solid #ddd;
+                            background: transparent;
+                            height: 42px;
+                            margin: 0;
+                            color: $txt;
+                            padding: 10px 20px;
+                        }
+                        input{
+                            &::-webkit-input-placeholder {
+                              color: rgba(74, 55, 57, 0.57);
+                            }
+                            &::-moz-placeholder {
+                              color: rgba(74, 55, 57, 0.57);
+                            }
+                            &:-ms-input-placeholder {
+                              color: rgba(74, 55, 57, 0.57);
+                            }
+                            &:-moz-placeholder {
+                              color: rgba(74, 55, 57, 0.57);
+                            }
+                        }
+                    }
+                    &.gf_right_half{
+                        padding-right: 0;
+                    }
+                    &.gf_left_third,
+                    &.gf_middle_third{
+                        padding-right: 16px !important;
+                        @include media-breakpoint-down(xs){
+                            padding: 0 !important;
+                        }
+                    }
+                    .ginput_container_fileupload{
+                        border: 1px solid #C2C2C2;
+                        border-radius: 3px;
+                        position: relative;
+                        &:after{
+                            content: '';
+                            background: url('../../img/upload.png');
+                            width: 17px;
+                            height: 17px;
+                            position: absolute;
+                            right: 10px;
+                            top: 12px;
+                        }
+                        input{
+                            opacity: 0;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            @include media-breakpoint-down(md){
+                display: block !important;
+            }
+        }
+        .gform_footer{
+            margin: 10px 0 0 0;
+            padding: 0;
+            input[type=submit]{
+                margin: 0;
+                @include fade(0.4s);
+                background: $primary;
+                color: #fff;
+                height: auto;
+                padding: 12px 70px;
+                border-radius: 4px;
+                font-family: $font-family-base;
+                border: 0;
+                text-transform: uppercase;
+                font-weight: $font-weight-bold;
+                font-size: 13px;
+                &:hover{
+                    cursor: pointer;
+                    background: $primary-hover;
+                    @include fade(0.4s);
+                }
+            }
+        }
+    }
+
+
+    //Validation Error Styles
+    img{ width: auto !important; }
+    .gfield_time_ampm select{
+        width: 8rem !important;
+        padding: 10px 30px 10px 15px !important;
+    }
+    .validation_error{
+        color: #a72b2b !important;
+        line-height: 20px !important;
+        font-weight: 700 !important;
+        border-top: none !important;
+        text-align: left !important;
+        border-bottom: 1px solid #a72b2b !important;
+        margin: 0 !important;
+        padding: 0 0 20px 0 !important;
+    }
+    .top_label .gfield_error{
+        width: 47% !important;
+    }
+    li{
+        &.gfield.gfield_error{
+            opacity: 0.8;
+            background-color: transparent !important;
+            border: none !important;
+            &.gfield_contains_required{
+                div.gfield_description,
+                div.ginput_container,
+                label.gfield_label{
+                    margin-left: 0px !important;
+                    color: #a72b2b !important;
+                    padding-top: 0 !important;
+                }
+            }
+            input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper li.gfield_error textarea{
+                border-bottom: 1px solid #a72b2b !important;
+            }
+            &.gfield_contains_required div.ginput_container{
+                margin-top: 0 !important;
+            }
+            .ginput_container:before {
+                margin-bottom: 2px;
+            }
+            .ginput_container_textarea:before {
+                margin-bottom: 10px;
+            }
+            .ginput_container_phone:before {
+                margin-bottom: 28px;
+            }
+        }
+    }
+    &.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half){ width: 100% !important; }
+}

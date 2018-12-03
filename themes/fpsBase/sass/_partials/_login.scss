@@ -1,0 +1,125 @@
+.page-template-template-tml{
+  background-color: #f1f1f1;
+  .logo{
+    text-align: center;
+    max-width: 33%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 10%;
+    @include media-breakpoint-down(md){
+      max-width: 60%;
+    }
+    @include media-breakpoint-down(xs){
+      max-width: 100%;
+    }
+  }
+}
+.tml-action {
+    iframe{ height: 78px; }
+    .form-login {
+        box-shadow: 0 10px 50px 0 rgba(0,0,0,0.05);
+        background-color: #fff;
+        border-radius: 3px;
+        margin: 0 auto;
+        padding: 30px;
+        width: 33%;
+        .tml{
+            .error{
+                margin-top: 50px;
+            }
+        }
+        @include media-breakpoint-down(lg){
+          width: 40%;
+        }
+        @include media-breakpoint-down(md){
+          width: 60%;
+        }
+        @include media-breakpoint-down(sm){
+          width: 80%;
+        }
+        @include media-breakpoint-down(xs){
+          width: 100%;
+        }
+    }
+    .tml{
+        label{
+          text-transform: uppercase;
+          letter-spacing: 1.3px;
+          letter-spacing: 1px;
+          font-size: 11px;
+          color: #4F4E4B;
+        }
+        input{
+            border: 1px solid #cdcdcd;
+            padding: 0 10px;
+            color: #4F4E4B;
+            height: 50px;
+            letter-spacing: 0.7px;
+        }
+        .tml-user-login-wrap{
+            margin: 2rem 0;
+        }
+        .tml-user-pass-wrap{
+            margin: 2rem 0 1rem 0;
+            padding: 0;
+        }
+        .tml-user-login-wrap{ margin-bottom: 20px; }
+        .tml-submit-wrap{
+            display: block;
+            margin-top: 10px;
+            input[type="submit"]{
+                color: #fff;
+                width: 100%;
+                padding: 0;
+                font-weight: $font-weight-bold;
+                border: none;
+                text-transform: uppercase;
+                font-size: 13px !important;
+                letter-spacing: 1px !important;
+                height: auto;
+                line-height: 50px;
+                background: $primary;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .message{ font-size: 14px; }
+        .tml-rememberme-submit-wrap{ margin-bottom: 0; }
+        .tml-rememberme-wrap{
+            display: block;
+            text-align: left;
+            margin: 0;
+            input{
+                height: auto;
+                width: auto !important;
+                -webkit-appearance: checkbox;
+                -moz-appearance: checkbox;
+                appearance: checkbox;
+            }
+        }
+        .tml-action-links{
+            float: right;
+            text-align: right;
+            margin: 0 !important;
+            width: auto;
+            li:before{ display: none; }
+        }
+        .g-recaptcha{
+            margin: 0 0 30px 0 !important;
+        }
+        .tml-action-links{
+            margin: 15px 0 0 0;
+            text-align: right !important;
+        }
+        .tml-links{
+          li{
+            &::before{ content: ""; }
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 0;
+            a{ letter-spacing: 0.5px; }
+          }
+        }
+    }
+}
